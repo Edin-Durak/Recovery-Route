@@ -29,8 +29,9 @@
   --border-light: #e9ecef;
 
   /* Typography */
-  --font-family-primary: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-family-secondary: "Poppins", sans-serif;
+  --font-family-primary: "Figtree", -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  --font-family-secondary: "Figtree", sans-serif;
   --font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono",
     Consolas, monospace;
   --font-size-xs: 0.75rem;

@@ -50,4 +50,30 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "power3.out",
     });
   });
+
+  // Help Section Animation
+  gsap.from(".help-section__image", {
+    scrollTrigger: {
+      trigger: ".help-section",
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+    x: -100,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power3.out",
+  });
+
+  gsap.from(".help-section__content > *", {
+    scrollTrigger: {
+      trigger: ".help-section__content",
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power3.out",
+  });
 });

@@ -1319,3 +1319,48 @@ body.mobile-menu-open {
 .mobile-nav__menu a:hover {
   color: var(--primary-light);
 }
+
+/* ==========================================================================
+   Scroll-to-Top Button
+   ========================================================================== */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: var(--spacing-xl);
+  right: var(--spacing-xl);
+  width: 50px;
+  height: 50px;
+  background-color: var(--text-primary);
+  color: var(--text-white);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-sticky);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all var(--transition-normal);
+}
+
+.scroll-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top.invert-colors {
+  background-color: var(--text-white);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-md);
+}
+
+/* ==========================================================================
+   Dynamic UI Colors
+   ========================================================================== */
+
+.header__mobile-toggle.invert-colors span {
+  background-color: var(--text-white);
+}

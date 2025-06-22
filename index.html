@@ -278,7 +278,11 @@
     <!-- Main Content -->
     <main id="main-content" role="main">
       <!-- Hero Section -->
-      <section class="hero" aria-labelledby="hero-title">
+      <section
+        class="hero"
+        aria-labelledby="hero-title"
+        data-section-theme="dark"
+      >
         <img
           class="hero__background"
           src="assets/images/hero-background-img.jpg"
@@ -304,6 +308,7 @@
         id="introduction"
         class="introduction"
         aria-labelledby="introduction-title"
+        data-section-theme="light"
       >
         <div class="container">
           <img
@@ -330,7 +335,7 @@
       </section>
 
       <!-- Help Section -->
-      <section id="help" class="help-section">
+      <section id="help" class="help-section" data-section-theme="light">
         <div class="help-section__container container">
           <div class="help-section__image">
             <img
@@ -389,7 +394,11 @@
       </section>
 
       <!-- Designed for Needs Section -->
-      <section id="designed" class="designed-for-needs">
+      <section
+        id="designed"
+        class="designed-for-needs"
+        data-section-theme="dark"
+      >
         <div class="designed-for-needs__container container">
           <div class="designed-for-needs__content">
             <h2 class="designed-for-needs__title">
@@ -428,7 +437,7 @@
       </section>
 
       <!-- Center Benefits Section -->
-      <section id="benefits" class="center-benefits">
+      <section id="benefits" class="center-benefits" data-section-theme="light">
         <div class="center-benefits__container container">
           <div class="center-benefits__image">
             <img
@@ -470,7 +479,7 @@
       </section>
 
       <!-- Pricing Section -->
-      <section id="pricing" class="pricing-section">
+      <section id="pricing" class="pricing-section" data-section-theme="light">
         <div class="pricing-section__container container">
           <div class="pricing-section__content">
             <h2 class="pricing-section__title">Pay-per-lead pricing</h2>
@@ -498,6 +507,19 @@
         </div>
       </section>
     </main>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        width="24"
+        height="24"
+      >
+        <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z" />
+      </svg>
+    </button>
 
     <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

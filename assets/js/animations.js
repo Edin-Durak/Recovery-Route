@@ -1,6 +1,60 @@
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
+  // --- UI Elements ---
+  const mobileToggle = document.querySelector(".header__mobile-toggle");
+  const scrollToTopBtn = document.querySelector(".scroll-to-top");
+
+  // --- Scroll-to-Top Button Logic ---
+  if (scrollToTopBtn) {
+    // Visibility
+    gsap.to(scrollToTopBtn, {
+      scrollTrigger: {
+        trigger: "body",
+        start: "20% top",
+        toggleActions: "play none none reverse",
+        onEnter: () => scrollToTopBtn.classList.add("is-visible"),
+        onLeaveBack: () => scrollToTopBtn.classList.remove("is-visible"),
+      },
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+    });
+
+    // Click action
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+
+  // --- Dynamic UI Color Change on Scroll ---
+  const themedSections = document.querySelectorAll("[data-section-theme]");
+  const elementsToInvert = [mobileToggle, scrollToTopBtn].filter(Boolean);
+
+  themedSections.forEach((section) => {
+    const theme = section.dataset.sectionTheme;
+
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top center",
+      end: "bottom center",
+      onToggle: (self) => {
+        if (self.isActive) {
+          if (theme === "dark") {
+            elementsToInvert.forEach((el) => el.classList.add("invert-colors"));
+          } else {
+            elementsToInvert.forEach((el) =>
+              el.classList.remove("invert-colors")
+            );
+          }
+        }
+      },
+    });
+  });
+
   // Hero Section Animation
   gsap.from(".hero__title", {
     duration: 1,

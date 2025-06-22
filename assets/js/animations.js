@@ -76,4 +76,56 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.2,
     ease: "power3.out",
   });
+
+  // Designed for Needs Section Animation
+  gsap.from(".designed-for-needs__content > *", {
+    scrollTrigger: {
+      trigger: ".designed-for-needs__content",
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power3.out",
+  });
+
+  gsap.from(".designed-for-needs__image", {
+    scrollTrigger: {
+      trigger: ".designed-for-needs",
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+    x: 100,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power3.out",
+  });
+
+  // Center Benefits Section Animation
+  gsap.from(".center-benefits__image", {
+    scrollTrigger: {
+      trigger: ".center-benefits",
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+    x: -100,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power3.out",
+  });
+
+  gsap.from(".center-benefits__content > *", {
+    scrollTrigger: {
+      trigger: ".center-benefits__content",
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power3.out",
+  });
 });

@@ -724,7 +724,7 @@ a:hover {
 }
 
 .center-benefits__content {
-  padding: var(--spacing-2xl) var(--spacing-xl);
+  padding: var(--spacing-3xl) var(--spacing-xl);
 }
 
 .center-benefits__title {
@@ -755,246 +755,50 @@ a:hover {
 }
 
 /* ==========================================================================
-   Services Section
+   Pricing Section
    ========================================================================== */
 
-.services {
-  padding: var(--spacing-4xl) 0;
-  background-color: var(--background-light);
+.pricing-section {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  padding: var(--spacing-5xl) 0;
 }
 
-.services__grid {
+.pricing-section__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-2xl);
-}
-
-.service-card {
-  background: white;
-  padding: var(--spacing-2xl);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-md);
-  transition: all var(--transition-normal);
-  text-align: center;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-}
-
-.service-card__icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto var(--spacing-lg);
-  background: var(--primary-light);
-  border-radius: var(--radius-full);
-  display: flex;
+  grid-template-columns: 1.5fr 1fr;
   align-items: center;
-  justify-content: center;
+  gap: var(--spacing-4xl);
 }
 
-.service-card__icon img {
-  width: 40px;
-  height: 40px;
-  filter: brightness(0) invert(1);
+.pricing-section__image {
+  max-width: 439px;
+  height: auto;
+}
+.pricing-section__image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
 }
 
-.service-card__title {
-  margin-bottom: var(--spacing-md);
-  color: var(--text-color);
+.pricing-section__content {
+  max-width: 652px;
 }
 
-.service-card__description {
-  color: var(--text-muted);
-  line-height: var(--line-height-relaxed);
-}
-
-/* ==========================================================================
-   About Section
-   ========================================================================== */
-
-.about {
-  padding: var(--spacing-4xl) 0;
-}
-
-.about__content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.about__description {
-  font-size: var(--font-size-lg);
+.pricing-section__title {
+  font-size: var(--font-size-5xl);
   margin-bottom: var(--spacing-3xl);
-  color: var(--text-muted);
+  font-weight: var(--font-weight-bold);
 }
 
-.about__stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: var(--spacing-2xl);
-}
-
-.stat {
-  text-align: center;
-}
-
-.stat__number {
-  display: block;
+.pricing-section p {
   font-size: var(--font-size-4xl);
+  line-height: var(--line-height-100);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.pricing-section p strong {
   font-weight: var(--font-weight-bold);
-  color: var(--primary-color);
-  line-height: 1;
-}
-
-.stat__label {
-  font-size: var(--font-size-sm);
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* ==========================================================================
-   Programs Section
-   ========================================================================== */
-
-.programs {
-  padding: var(--spacing-4xl) 0;
-  background-color: var(--background-light);
-}
-
-.programs__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: var(--spacing-2xl);
-}
-
-.program-card {
-  background: white;
-  padding: var(--spacing-2xl);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-md);
-  transition: all var(--transition-normal);
-}
-
-.program-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
-}
-
-.program-card__title {
-  color: var(--primary-color);
-  margin-bottom: var(--spacing-md);
-}
-
-.program-card__description {
-  color: var(--text-muted);
-  margin-bottom: var(--spacing-lg);
-}
-
-.program-card__features {
-  list-style: none;
-  padding: 0;
-}
-
-.program-card__features li {
-  padding: var(--spacing-sm) 0;
-  padding-left: var(--spacing-lg);
-  position: relative;
-  color: var(--text-color);
-}
-
-.program-card__features li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--accent-color);
-  font-weight: var(--font-weight-bold);
-}
-
-/* ==========================================================================
-   Testimonials Section
-   ========================================================================== */
-
-.testimonials {
-  padding: var(--spacing-4xl) 0;
-}
-
-.testimonials__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: var(--spacing-2xl);
-}
-
-.testimonial {
-  background: var(--background-light);
-  padding: var(--spacing-2xl);
-  border-radius: var(--radius-xl);
-  border-left: 4px solid var(--primary-color);
-  position: relative;
-}
-
-.testimonial__text {
-  font-style: italic;
-  font-size: var(--font-size-lg);
-  margin-bottom: var(--spacing-lg);
-  color: var(--text-color);
-}
-
-.testimonial__author {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xs);
-}
-
-.testimonial__author cite {
-  font-weight: var(--font-weight-semibold);
-  color: var(--text-color);
-  font-style: normal;
-}
-
-.testimonial__status {
-  font-size: var(--font-size-sm);
-  color: var(--accent-color);
-  font-weight: var(--font-weight-medium);
-}
-
-/* ==========================================================================
-   Contact Section
-   ========================================================================== */
-
-.contact {
-  padding: var(--spacing-4xl) 0;
-  background-color: var(--background-light);
-}
-
-.contact__content {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: var(--spacing-3xl);
-  align-items: start;
-}
-
-.contact__info h3 {
-  color: var(--primary-color);
-  margin-bottom: var(--spacing-md);
-}
-
-.contact__info p {
-  color: var(--text-muted);
-  margin-bottom: var(--spacing-lg);
-}
-
-.contact__phone {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-.contact__phone:hover {
-  color: var(--primary-dark);
 }
 
 /* ==========================================================================
@@ -1190,6 +994,7 @@ a:hover {
   }
   .help-section__container {
     padding-right: 0;
+    margin-right: 0;
   }
 
   .help-section__image {
@@ -1223,14 +1028,51 @@ a:hover {
   .help-section__item p {
     font-size: var(--font-size-lg);
   }
+  .designed-for-needs {
+    background: linear-gradient(
+      to right,
+      #006266 14.3%,
+      #007176 14.3%,
+      #007176 28.6%,
+      #027f84 28.6%,
+      #027f84 42.9%,
+      #1b8c90 42.9%,
+      #1b8c90 57.2%,
+      #419fa3 57.2%,
+      #419fa3 71.5%,
+      #80bfc1 71.5%,
+      #80bfc1 85.8%,
+      #c0dfe0 85.8%,
+      #c0dfe0 100%
+    );
+    color: var(--text-white);
+    padding: var(--spacing-2xl) 0;
+    box-shadow: inset -6px 0 30px 0 rgba(0, 0, 0, 0.25);
+  }
 
   .designed-for-needs__content {
     padding-right: 0;
     margin: 0 auto var(--spacing-3xl);
     text-align: center;
-    max-width: 600px;
+    max-width: 80%;
   }
 
+  .designed-for-needs__title {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .designed-for-needs__item h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  .designed-for-needs__item p {
+    font-size: var(--font-size-lg);
+  }
+
+  .designed-for-needs__item p {
+    font-size: var(--font-size-lg);
+  }
   .designed-for-needs__image {
     display: none;
   }
@@ -1241,6 +1083,7 @@ a:hover {
   }
   .center-benefits__container {
     padding-right: 0;
+    margin-right: 0;
   }
 
   .center-benefits__image {
@@ -1269,6 +1112,22 @@ a:hover {
   .center-benefits__item p {
     font-size: var(--font-size-lg);
   }
+  .center-benefits__image {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .pricing-section__title {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-xl);
+  }
+  .pricing-section__content p {
+    font-size: var(--font-size-lg);
+  }
+
+  .pricing-section__image {
+    order: 1;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1290,6 +1149,17 @@ a:hover {
   }
   .introduction__image {
     top: -100%;
+  }
+
+  .pricing-section__container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    text-align: center;
+  }
+
+  .pricing-section__content {
+    order: 2;
+    max-width: 100%;
   }
 
   .contact__content {

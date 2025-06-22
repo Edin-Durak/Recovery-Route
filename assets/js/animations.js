@@ -128,4 +128,30 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.2,
     ease: "power3.out",
   });
+
+  // Pricing Section Animation
+  gsap.from(".pricing-section__content > *", {
+    scrollTrigger: {
+      trigger: ".pricing-section__content",
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power3.out",
+  });
+
+  gsap.from(".pricing-section__image", {
+    scrollTrigger: {
+      trigger: ".pricing-section",
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+    x: 100,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power3.out",
+  });
 });

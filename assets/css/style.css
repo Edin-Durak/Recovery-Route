@@ -486,6 +486,7 @@ a:hover {
 
 .hero__content {
   max-width: 650px;
+  margin-left: var(--spacing-4xl);
 }
 
 .hero__title {
@@ -496,7 +497,7 @@ a:hover {
 }
 
 .hero__description {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-normal);
   margin-bottom: var(--spacing-2xl);
   opacity: 0.95;
@@ -506,7 +507,7 @@ a:hover {
 
 .hero__launch-date {
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-3xl);
   color: var(--text-white);
   opacity: 0.95;
 }
@@ -1142,6 +1143,7 @@ a:hover {
 
   .hero__content {
     padding: 0 var(--spacing-md);
+    margin-left: 0;
   }
 
   .introduction {

@@ -226,10 +226,14 @@
               <a href="#about" role="menuitem">About</a>
             </li>
             <li role="none">
-              <a href="#login" role="menuitem">Login</a>
+              <a href="#login" role="menuitem" class="header__menu-link"
+                >Login</a
+              >
             </li>
             <li role="none">
-              <a href="#register" role="menuitem">Register</a>
+              <a href="#register" role="menuitem" class="header__menu-link"
+                >Register</a
+              >
             </li>
           </ul>
 
@@ -250,29 +254,52 @@
     <main id="main-content" role="main">
       <!-- Hero Section -->
       <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero__background"
+          src="assets/images/hero-background-img.jpg"
+          alt="Two men in a supportive conversation in a comfortable setting."
+          loading="eager"
+        />
         <div class="container">
           <div class="hero__content">
             <h1 id="hero-title" class="hero__title">
-              Your Journey to Recovery Starts Here
+              Our mission is to empower<br />those seeking treatment
             </h1>
             <p class="hero__description">
-              Professional addiction recovery and mental health support with
-              24/7 care, personalized treatment plans, and compassionate
-              guidance for your recovery journey.
+              RecoveryRoute is the world's first marketplace for substance abuse
+              treatment programs.
             </p>
-            <div class="hero__actions">
-              <a href="#contact" class="button button--primary">Get Help Now</a>
-              <a href="#programs" class="button button--secondary"
-                >Learn More</a
-              >
-            </div>
+            <p class="hero__launch-date">Launching Fall 2025</p>
           </div>
-          <div class="hero__image">
-            <img
-              src="/assets/images/hero-image.jpg"
-              alt="Recovery support group meeting"
-              loading="eager"
-            />
+        </div>
+      </section>
+
+      <!-- Introduction Section -->
+      <section
+        id="introduction"
+        class="introduction"
+        aria-labelledby="introduction-title"
+      >
+        <div class="container">
+          <img
+            src="assets/images/Group 104.png"
+            alt="RecoveryRoute application interface shown on a MacBook and an iPhone."
+            loading="lazy"
+            class="introduction__image img-fluid"
+          />
+          <div class="introduction__content">
+            <h2 id="introduction-title" class="introduction__title">
+              Introducing RecoveryRoute
+            </h2>
+            <p class="introduction__text">
+              RecoveryRoute is matching people with addiction treatment programs
+              that best suit their needs.
+            </p>
+            <p class="introduction__text introduction__text--large">
+              Our goal is to make outreach and intakes easier for centers like
+              yours, so that you can focus on what matters most: providing
+              top-quality care to those in need.
+            </p>
           </div>
         </div>
       </section>

@@ -418,7 +418,7 @@ a:hover {
 .header__mobile-toggle span {
   width: 25px;
   height: 3px;
-  background-color: var(--background-color);
+  background-color: var(--text-primary);
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
 }
@@ -1354,6 +1354,11 @@ body.mobile-menu-open {
 .scroll-to-top.invert-colors {
   background-color: var(--text-white);
   color: var(--text-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.scroll-to-top.is-visible:hover {
+  bottom: var(--spacing-xl);
   box-shadow: var(--shadow-md);
 }
 

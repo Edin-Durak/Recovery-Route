@@ -32,28 +32,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- Dynamic UI Color Change on Scroll ---
   const themedSections = document.querySelectorAll("[data-section-theme]");
-  const elementsToInvert = [mobileToggle, scrollToTopBtn].filter(Boolean);
 
-  themedSections.forEach((section) => {
-    const theme = section.dataset.sectionTheme;
-
-    ScrollTrigger.create({
-      trigger: section,
-      start: "top center",
-      end: "bottom center",
-      onToggle: (self) => {
-        if (self.isActive) {
-          if (theme === "dark") {
-            elementsToInvert.forEach((el) => el.classList.add("invert-colors"));
-          } else {
-            elementsToInvert.forEach((el) =>
-              el.classList.remove("invert-colors")
-            );
+  // For hamburger menu (top of screen)
+  if (mobileToggle) {
+    themedSections.forEach((section) => {
+      const theme = section.dataset.sectionTheme;
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top 80px",
+        end: "bottom 80px",
+        onToggle: (self) => {
+          if (self.isActive) {
+            if (theme === "dark") {
+              mobileToggle.classList.add("invert-colors");
+            } else {
+              mobileToggle.classList.remove("invert-colors");
+            }
           }
-        }
-      },
+        },
+      });
     });
-  });
+  }
+
+  // For scroll-to-top button (bottom of screen)
+  if (scrollToTopBtn) {
+    themedSections.forEach((section) => {
+      const theme = section.dataset.sectionTheme;
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top bottom-=80px",
+        end: "bottom bottom-=80px",
+        onToggle: (self) => {
+          if (self.isActive) {
+            if (theme === "dark") {
+              scrollToTopBtn.classList.add("invert-colors");
+            } else {
+              scrollToTopBtn.classList.remove("invert-colors");
+            }
+          }
+        },
+      });
+    });
+  }
 
   // Hero Section Animation
   gsap.from(".hero__title", {

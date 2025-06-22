@@ -1,0 +1,436 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Project Rules - Landing Page
+
+## Project Overview
+
+Vanilla HTML/CSS/JS landing page optimized for fast loading, SEO, and responsive design with special focus on iOS devices.
+
+## File Structure
+
+```
+/
+├── index.html
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── script.js
+│   └── images/
+└── project-rules.md
+```
+
+## HTML Rules
+
+### Structure & Semantics
+
+- Use semantic HTML5 elements (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`)
+- Implement proper heading hierarchy (h1 → h6)
+- Use descriptive alt attributes for all images
+- Include meta tags for SEO and mobile optimization
+- Add Open Graph and Twitter Card meta tags
+- Implement schema.org structured data where appropriate
+
+### Performance
+
+- Minimize DOM depth (max 4-5 levels deep)
+- Use lazy loading for images below the fold
+- Implement critical CSS inlining for above-the-fold content
+- Defer non-critical JavaScript
+- Use `preload` for critical resources
+- Implement resource hints (`dns-prefetch`, `preconnect`)
+
+### Accessibility
+
+- Maintain WCAG 2.1 AA compliance
+- Use proper ARIA labels and roles
+- Ensure keyboard navigation works
+- Maintain color contrast ratios (4.5:1 minimum)
+- Provide focus indicators
+- Use semantic form elements with proper labels
+
+## CSS Rules
+
+### BEM Naming Convention
+
+```css
+/* Block */
+.block {
+}
+
+/* Element */
+.block__element {
+}
+
+/* Modifier */
+.block--modifier {
+}
+.block__element--modifier {
+}
+
+/* Examples */
+.header {
+}
+.header__nav {
+}
+.header__nav--mobile {
+}
+.button {
+}
+.button--primary {
+}
+.button--large {
+}
+.card {
+}
+.card__title {
+}
+.card__content {
+}
+.card--featured {
+}
+```
+
+### Bootstrap 5.3 Container System
+
+```css
+/* Container classes */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--spacing-md);
+  padding-left: var(--spacing-md);
+}
+
+.container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--spacing-md);
+  padding-left: var(--spacing-md);
+}
+
+/* Responsive containers */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+```
+
+### CSS Variables (Custom Properties)
+
+```css
+:root {
+  /* Colors */
+  --primary-color: #007bff;
+  --primary-dark: #0056b3;
+  --primary-light: #3391ff;
+  --secondary-color: #6c757d;
+  --secondary-dark: #545b62;
+  --secondary-light: #868e96;
+  --accent-color: #28a745;
+  --accent-dark: #1e7e34;
+  --accent-light: #48c774;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --text-color: #333;
+  --text-muted: #6c757d;
+  --background-color: #fff;
+  --background-light: #f8f9fa;
+  --border-color: #dee2e6;
+  --border-light: #e9ecef;
+
+  /* Typography */
+  --font-family-primary: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-secondary: "Poppins", sans-serif;
+  --font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono",
+    Consolas, monospace;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --line-height-tight: 1.25;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.75;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-0: 0;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 6rem;
+
+  /* Breakpoints */
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  --transition-bounce: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Z-Index */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+```
+
+### Typography
+
+- Import fonts using `@import` or `<link>` in HTML head
+- Use system font stack as fallback
+- Implement font-display: swap for web fonts
+- Use relative units (rem, em) for font sizes
+- Maintain readable line lengths (45-75 characters)
+
+### Responsive Design
+
+- Mobile-first approach
+- Use CSS Grid and Flexbox for layouts
+- Implement fluid typography with clamp()
+- Use container queries where supported
+- Test on actual iOS devices (not just simulators)
+- Handle safe areas for notched devices
+
+### Performance
+
+- Minimize CSS file size
+- Use efficient selectors (avoid deep nesting)
+- Implement critical CSS path
+- Use `will-change` sparingly
+- Optimize animations with transform/opacity
+- Use `contain` property for layout optimization
+
+### iOS-Specific Considerations
+
+- Handle viewport height issues (vh units)
+- Implement touch-friendly tap targets (44px minimum)
+- Use -webkit- prefixes where necessary
+- Handle iOS Safari quirks (position: sticky, etc.)
+- Test on various iOS versions and devices
+
+## JavaScript Rules
+
+### Performance
+
+- Minimize JavaScript bundle size
+- Use async/defer attributes appropriately
+- Implement code splitting if needed
+- Avoid blocking the main thread
+- Use requestAnimationFrame for animations
+- Implement proper event delegation
+
+### Best Practices
+
+- Use ES6+ features with fallbacks
+- Implement proper error handling
+- Use meaningful variable and function names
+- Add JSDoc comments for complex functions
+- Implement progressive enhancement
+- Handle offline scenarios gracefully
+
+### SEO & Analytics
+
+- Implement proper tracking (Google Analytics, etc.)
+- Add structured data markup
+- Handle social media sharing
+- Implement proper meta tag updates
+- Add breadcrumb navigation where appropriate
+
+## Performance Targets
+
+### Core Web Vitals
+
+- Largest Contentful Paint (LCP): < 2.5s
+- First Input Delay (FID): < 100ms
+- Cumulative Layout Shift (CLS): < 0.1
+
+### Loading Performance
+
+- First Contentful Paint (FCP): < 1.8s
+- Time to Interactive (TTI): < 3.8s
+- Total Blocking Time (TBT): < 200ms
+
+### File Size Limits
+
+- HTML: < 50KB
+- CSS: < 50KB (uncompressed)
+- JavaScript: < 100KB (uncompressed)
+- Images: Optimize for web (WebP with fallbacks)
+
+## Development Workflow
+
+### Code Quality
+
+- Use Prettier for code formatting
+- Implement ESLint for JavaScript
+- Use Stylelint for CSS
+- Maintain consistent naming conventions
+- Write self-documenting code
+
+### Testing
+
+- Test on multiple browsers (Chrome, Firefox, Safari, Edge)
+- Test on various iOS devices and versions
+- Test on different screen sizes and orientations
+- Validate HTML and CSS
+- Test accessibility with screen readers
+- Performance testing with Lighthouse
+
+### Optimization
+
+- Minify all assets for production
+- Optimize images (WebP, AVIF with fallbacks)
+- Implement proper caching headers
+- Use CDN for external resources
+- Compress text assets (gzip/brotli)
+
+## SEO Checklist
+
+### Technical SEO
+
+- [ ] Proper meta title and description
+- [ ] Open Graph tags
+- [ ] Twitter Card tags
+- [ ] Structured data markup
+- [ ] XML sitemap
+- [ ] robots.txt
+- [ ] Canonical URLs
+- [ ] Proper heading structure
+- [ ] Alt text for images
+- [ ] Internal linking strategy
+
+### Content SEO
+
+- [ ] Keyword research and implementation
+- [ ] Meta descriptions optimization
+- [ ] Image optimization with descriptive names
+- [ ] URL structure optimization
+- [ ] Content readability
+- [ ] Local SEO considerations (if applicable)
+
+## Accessibility Checklist
+
+### WCAG 2.1 AA Compliance
+
+- [ ] Proper heading structure
+- [ ] Alt text for images
+- [ ] Keyboard navigation
+- [ ] Color contrast ratios
+- [ ] Focus indicators
+- [ ] ARIA labels and roles
+- [ ] Screen reader compatibility
+- [ ] Form accessibility
+- [ ] Error message accessibility
+
+## Browser Support
+
+### Target Browsers
+
+- Chrome: Latest 2 versions
+- Firefox: Latest 2 versions
+- Safari: Latest 2 versions (iOS 14+)
+- Edge: Latest 2 versions
+
+### Progressive Enhancement
+
+- Core functionality works without JavaScript
+- Graceful degradation for older browsers
+- Feature detection for advanced features
+- Polyfills for essential functionality
+
+## Security Considerations
+
+### Best Practices
+
+- Use HTTPS only
+- Implement Content Security Policy (CSP)
+- Sanitize user inputs
+- Use secure external resources
+- Implement proper CORS headers
+- Regular security audits
+
+## Deployment
+
+### Production Checklist
+
+- [ ] All assets minified and optimized
+- [ ] Images optimized and in correct formats
+- [ ] Proper caching headers set
+- [ ] HTTPS implemented
+- [ ] Performance testing completed
+- [ ] Cross-browser testing completed
+- [ ] Mobile testing completed
+- [ ] SEO audit completed
+- [ ] Accessibility audit completed

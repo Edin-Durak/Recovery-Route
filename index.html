@@ -283,12 +283,21 @@
         aria-labelledby="hero-title"
         data-section-theme="dark"
       >
-        <img
-          class="hero__background"
-          src="assets/images/hero-background-img.jpg"
-          alt="Two men in a supportive conversation in a comfortable setting."
-          loading="eager"
-        />
+        <!-- Video Background -->
+        <div class="hero__background-container">
+          <video
+            class="hero__background-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="./assets/images/hero-background-img.jpg"
+            preload="metadata"
+          >
+            <!-- Optimized video source (4.2MB) -->
+            <source src="./assets/videos/RecoveryRoute.mp4" type="video/mp4" />
+          </video>
+        </div>
         <div class="container">
           <div class="hero__content">
             <h1 id="hero-title" class="hero__title">

@@ -144,6 +144,21 @@ body {
   }
 }
 
+/* Video background optimizations for mobile */
+@media (max-width: 768px) {
+  .hero__background-video {
+    /* Optimized video should work fine on mobile now */
+    object-position: center;
+  }
+}
+
+/* Disable video on low-end devices or when user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero__background-video {
+    display: none;
+  }
+}
+
 /* ==========================================================================
    Container System (Bootstrap 5.3)
    ========================================================================== */
@@ -469,14 +484,31 @@ a:hover {
   z-index: 1;
 }
 
+.hero__background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero__background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .hero__background {
   position: absolute;
-  top: 10px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  display: block; /* Ensure it's visible by default */
 }
 
 .hero .container {

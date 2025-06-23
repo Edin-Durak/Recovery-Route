@@ -644,24 +644,130 @@ a:hover {
 }
 
 /* ==========================================================================
-   How it works Section
+   How it works Section (Custom)
    ========================================================================== */
 .how-it-works-section {
-  background-color: var(--background-color);
-  position: relative;
-  padding: var(--spacing-6xl) 0;
-  overflow: hidden;
+  padding: var(--spacing-4xl) 0;
 }
 
-.how-it-works__image-mobile {
+.how-it-works-section__title {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
+}
+.how-it-works-section p {
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-100);
+  opacity: 0.9;
+}
+
+.how-it-works__steps {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--spacing-4xl);
+  margin-top: var(--spacing-3xl);
+  flex-wrap: wrap;
+}
+.how-it-works__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 340px;
+  flex: 1 1 340px;
+  background: none;
+}
+.how-it-works__img {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  background: var(--background-light);
+}
+.how-it-works__caption {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
+  text-align: center;
+}
+.how-it-works__step--mobile {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .how-it-works__steps {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-2xl);
+  }
+  .how-it-works__step {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+  .how-it-works__step--mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--spacing-lg);
+  }
+}
+
+/* ==========================================================================
+   Easy Integration Section (Custom)
+   ========================================================================== */
+.easy-integration-section {
+  background: var(--background-color);
+  padding: 0 0 var(--spacing-4xl);
+  position: relative;
+  overflow: hidden;
+}
+.easy-integration__title {
+  text-align: left;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-3xl);
+}
+.easy-integration__items {
+  display: flex;
+  gap: var(--spacing-4xl);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.easy-integration__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  max-width: 340px;
+  flex: 1 1 300px;
+  margin-bottom: var(--spacing-2xl);
+}
+.easy-integration__img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  background: var(--background-light);
+}
+.easy-integration__text {
+  text-align: center;
+}
+.easy-integration__item--mobile {
+  display: none;
+}
+.easy-integration__image-mobile {
   display: none;
   position: absolute;
-  bottom: -10%;
+  bottom: -300px;
   left: 50%;
-  transform: translateX(-20%);
+  transform: translateX(-50%);
   width: 100%;
-  height: 100%;
-  max-width: 100%;
+  height: auto;
+  max-width: 320px;
+  z-index: 1;
 }
 
 /* ==========================================================================
@@ -1017,7 +1123,10 @@ a:hover {
   .introduction__image {
     top: -150%;
   }
-  .how-it-works__image-mobile {
+  .easy-integration {
+    position: relative;
+  }
+  .easy-integration__image-mobile {
     display: block;
   }
 
@@ -1401,4 +1510,29 @@ body.mobile-menu-open {
 
 .header__mobile-toggle.invert-colors span {
   background-color: var(--text-white);
+}
+
+@media (max-width: 992px) {
+  .easy-integration-section {
+    padding-bottom: 320px;
+  }
+  .easy-integration__items {
+    flex-direction: column;
+    gap: var(--spacing-2xl);
+  }
+  .easy-integration__item {
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+  }
+  .easy-integration__item--mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--spacing-lg);
+  }
+  .easy-integration__text {
+    text-align: center;
+  }
 }

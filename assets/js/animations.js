@@ -100,12 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
     delay: 1.1,
   });
 
-  gsap.from(".hero__background", {
-    duration: 1.5,
-    scale: 1.1,
-    ease: "power3.out",
-  });
-
   // Introduction Section Animation
   const introElements = document.querySelectorAll(
     ".introduction__image, .introduction__title, .introduction__text"

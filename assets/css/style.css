@@ -647,7 +647,7 @@ a:hover {
    How it works Section (Custom)
    ========================================================================== */
 .how-it-works-section {
-  padding: var(--spacing-4xl) 0;
+  padding: var(--spacing-4xl) 0 var(--spacing-2xl);
 }
 
 .how-it-works-section__title {
@@ -691,66 +691,46 @@ a:hover {
   color: var(--primary-color);
   text-align: center;
 }
-.how-it-works__step--mobile {
-  display: none;
-}
-
-@media (max-width: 992px) {
-  .how-it-works__steps {
-    flex-direction: column;
-    align-items: stretch;
-    gap: var(--spacing-2xl);
-  }
-  .how-it-works__step {
-    max-width: 100%;
-    flex: 1 1 100%;
-  }
-  .how-it-works__step--mobile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: var(--spacing-lg);
-  }
-}
 
 /* ==========================================================================
-   Easy Integration Section (Grid + Order)
+   Easy Integration Section (Images span 2 rows each)
    ========================================================================== */
+.easy-integration-section {
+  position: relative;
+  overflow: hidden;
+  padding: var(--spacing-2xl) 0 var(--spacing-4xl);
+}
 .easy-integration__grid {
   display: grid;
   grid-template-columns: 420px 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto;
   gap: var(--spacing-3xl) var(--spacing-5xl);
   align-items: start;
-  padding: var(--spacing-6xl) 0;
+}
+.easy-integration__img--1 {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+.easy-integration__img--2 {
+  grid-column: 1;
+  grid-row: 3 / span 2;
+}
+.easy-integration__img--3 {
+  display: none;
 }
 .easy-integration__title {
   grid-column: 2;
   grid-row: 1;
   font-size: var(--font-size-5xl);
   font-weight: var(--font-weight-bold);
-  color: var(--primary-color);
-  margin-bottom: var(--spacing-3xl);
-  align-self: start;
-}
-.easy-integration__img--1 {
-  grid-column: 1;
-  grid-row: 1;
 }
 .easy-integration__text-block--1 {
   grid-column: 2;
   grid-row: 2;
 }
-.easy-integration__img--2 {
-  grid-column: 1;
-  grid-row: 2;
-}
 .easy-integration__text-block--2 {
   grid-column: 2;
   grid-row: 3;
-}
-.easy-integration__img--3 {
-  display: none;
 }
 .easy-integration__text-block--3 {
   grid-column: 2;
@@ -759,23 +739,30 @@ a:hover {
 .easy-integration__img {
   width: 100%;
   height: auto;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  background: var(--background-light);
   margin-bottom: 0;
 }
 .easy-integration__text-block {
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-4xl);
   color: var(--text-color);
   line-height: var(--line-height-100);
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: var(--spacing-xl);
 }
-.easy-integration__text-block strong {
+.easy-integration__text-block h3 {
   color: var(--primary-color);
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-3xl);
-  display: inline-block;
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-100);
+  display: block;
   margin-bottom: var(--spacing-xs);
+}
+
+.easy-integration__image-mobile {
+  display: none;
+  position: absolute;
+  bottom: -300px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 320px;
 }
 
 @media (max-width: 1200px) {
@@ -788,7 +775,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-2xl);
-    padding: var(--spacing-4xl) 0;
+    padding: var(--spacing-4xl) var(--spacing-md);
   }
   .easy-integration__title {
     order: 1;
@@ -833,7 +820,7 @@ a:hover {
 }
 @media (max-width: 576px) {
   .easy-integration__grid {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-2xl) var(--spacing-md);
   }
   .easy-integration__img {
     max-width: 100%;
@@ -1241,6 +1228,35 @@ a:hover {
   .help-section__item p {
     font-size: var(--font-size-lg);
   }
+
+  .how-it-works-section {
+    padding-bottom: 0;
+  }
+  .how-it-works-section__title {
+    font-size: var(--font-size-2xl);
+  }
+  .how-it-works-section p {
+    font-size: var(--font-size-lg);
+  }
+
+  .how-it-works__steps {
+    gap: var(--spacing-2xl);
+  }
+
+  .easy-integration__grid {
+    gap: var(--spacing-lg);
+  }
+
+  .easy-integration__title {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .easy-integration__text-block,
+  .easy-integration__text-block h3 {
+    font-size: var(--font-size-lg);
+  }
+
   .designed-for-needs {
     background: linear-gradient(
       to right,

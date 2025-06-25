@@ -236,4 +236,15 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.15,
     ease: "power3.out",
   });
+  gsap.to(".contact-interest-section__visual-img", {
+    scrollTrigger: {
+      trigger: ".contact-interest-section__visual-img",
+      start: "top 85%",
+      toggleActions: "play none none none",
+    },
+    x: 0,
+    opacity: 1,
+    duration: 1.2,
+    ease: "power3.out",
+  });
 });

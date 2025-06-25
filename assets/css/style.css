@@ -1622,3 +1622,159 @@ body.mobile-menu-open {
     text-align: center;
   }
 }
+
+/* ========================================================================== */
+/* Contact Interest Section */
+/* ========================================================================== */
+
+.contact-interest-section {
+  position: relative;
+  background: var(--background-light-green);
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-interest-section__container {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+  min-height: 480px;
+}
+
+.contact-interest-section__visual {
+  flex: 1 1 50%;
+  background: url("../images/multiple-phones-img.png") left center no-repeat;
+  background-size: contain;
+  min-width: 420px;
+  max-width: 600px;
+  min-height: 480px;
+  margin-right: var(--spacing-4xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  z-index: 1;
+}
+
+.contact-interest-section__content {
+  flex: 1 1 50%;
+  padding: var(--spacing-4xl) var(--spacing-4xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 340px;
+  max-width: 540px;
+}
+
+.contact-interest-section__title {
+  color: var(--primary-color);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-xl);
+}
+
+.contact-interest-section__subtitle {
+  color: var(--primary-color);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.contact-interest-section__email {
+  color: var(--primary-color);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xl);
+  word-break: break-all;
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.contact-interest-section__email:hover {
+  color: var(--primary-dark);
+}
+
+.contact-interest-section__form-title {
+  color: var(--primary-color);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-lg);
+}
+
+.contact-interest-section__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.contact-interest-section__button {
+  margin-top: var(--spacing-lg);
+  width: 140px;
+  align-self: flex-start;
+}
+
+/* Mobile/Tablet background image */
+@media (max-width: 992px) {
+  .contact-interest-section {
+    background: url("../images/multiple-phones-background-img.webp") center
+        center no-repeat,
+      var(--background-light-green);
+    background-size: cover;
+    padding: var(--spacing-4xl) 0;
+    position: relative;
+  }
+  .contact-interest-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--background-light-green);
+    opacity: 0.94;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .contact-interest-section__container {
+    position: relative;
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 0;
+  }
+  .contact-interest-section__visual {
+    display: none;
+  }
+  .contact-interest-section__content {
+    padding: var(--spacing-4xl) var(--spacing-md);
+    margin: 0 auto;
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-interest-section {
+    padding: var(--spacing-2xl) 0;
+    min-height: 0;
+  }
+  .contact-interest-section__content {
+    padding: var(--spacing-3xl) var(--spacing-xs);
+  }
+  .contact-interest-section__title {
+    font-size: var(--font-size-2xl);
+  }
+  .contact-interest-section__subtitle,
+  .contact-interest-section__form-title {
+    font-size: var(--font-size-lg);
+  }
+  .contact-interest-section__button {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+
+/* Animations (GSAP-ready) */
+.contact-interest-section__content > * {
+  opacity: 0;
+  transform: translateY(40px);
+}

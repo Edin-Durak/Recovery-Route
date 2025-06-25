@@ -222,4 +222,18 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 1.5,
     ease: "power3.out",
   });
+
+  // Contact Interest Section Animation
+  gsap.to(".contact-interest-section__content > *", {
+    scrollTrigger: {
+      trigger: ".contact-interest-section__content",
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.15,
+    ease: "power3.out",
+  });
 });

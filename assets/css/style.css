@@ -311,7 +311,7 @@ a:hover {
 .section-text,
 .help-section__item p,
 .how-it-works-section p,
-.easy-integration__text-block,
+.easy-integration__text-block p,
 .designed-for-needs__item p,
 .center-benefits__item p,
 .pricing-section p {
@@ -717,8 +717,6 @@ h3 {
 }
 .easy-integration__text-block h3 {
   color: var(--primary-color);
-  display: block;
-  margin-bottom: var(--spacing-xs);
 }
 
 .easy-integration__image-mobile {
@@ -824,9 +822,6 @@ h3 {
 .designed-for-needs__container {
   position: relative;
   padding: 0 var(--spacing-md);
-}
-
-.designed-for-needs__title {
   color: var(--text-white);
 }
 
@@ -834,12 +829,7 @@ h3 {
   margin-bottom: var(--spacing-2xl);
 }
 
-.designed-for-needs__item h3 {
-  color: var(--text-white);
-}
-
 .designed-for-needs__item p {
-  opacity: 0.9;
   max-width: 800px;
 }
 
@@ -881,16 +871,11 @@ h3 {
   padding: var(--spacing-3xl) var(--spacing-xl);
 }
 
-.center-benefits__title {
-  /* Removed repeated styles - now handled by universal .section-title */
-}
-
 .center-benefits__item {
   margin-bottom: var(--spacing-2xl);
 }
 
 .center-benefits__item p {
-  /* Removed repeated styles - now handled by universal .section-text */
   max-width: 500px;
 }
 
@@ -930,12 +915,7 @@ h3 {
   max-width: 652px;
 }
 
-.pricing-section__title {
-  /* Removed repeated styles - now handled by universal .section-title */
-}
-
 .pricing-section p {
-  /* Removed repeated styles - now handled by universal .section-text */
   margin-bottom: var(--spacing-2xl);
 }
 
@@ -985,7 +965,7 @@ h3 {
 }
 
 /* ==========================================================================
-   Footer (New)
+   Footer
    ========================================================================== */
 .footer {
   background: #f8f9fa;

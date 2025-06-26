@@ -141,7 +141,7 @@ body {
 body,
 section,
 .container {
-  overflow-x: hidden; /* Prevent horizontal scrolling because of the  animations */
+  overflow: hidden; /* Prevent horizontal scrolling because of the  animations */
 }
 
 /* iOS Safari viewport height fix */

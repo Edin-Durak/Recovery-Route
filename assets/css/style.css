@@ -896,7 +896,7 @@ h3 {
   height: auto;
   border-radius: var(--radius-lg);
   opacity: 0;
-  transform: translateX(-60px);
+  transform: translateX(-30px);
 }
 
 .contact-interest-section__content {
@@ -1854,6 +1854,80 @@ body.mobile-menu-open {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* ==========================================================================
+   Vanilla JavaScript Animations
+   ========================================================================== */
+
+/* Initial state for animated elements */
+.hero__title,
+.hero__description,
+.hero__launch-date,
+.introduction__image,
+.introduction__title,
+.introduction__text,
+.help-section__image,
+.help-section__content > *,
+.how-it-works-section__title,
+.how-it-works-section p,
+.how-it-works__step,
+.easy-integration__title,
+.easy-integration__img,
+.easy-integration__text-block,
+.easy-integration__image-mobile,
+.designed-for-needs__content > *,
+.designed-for-needs__image,
+.center-benefits__image,
+.center-benefits__content > *,
+.pricing-section__content > *,
+.pricing-section__image,
+.contact-interest-section__content > *,
+.contact-interest-section__visual-img,
+.footer__content > * {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity var(--transition-normal),
+    transform var(--transition-normal);
+}
+
+/* Special X-axis animations for specific elements - Desktop only */
+@media (min-width: 992px) {
+  .help-section__image,
+  .center-benefits__image {
+    transform: translateX(-50px);
+  }
+
+  .designed-for-needs__image,
+  .pricing-section__image {
+    transform: translateX(50px);
+  }
+
+  .contact-interest-section__visual-img {
+    transform: translateX(-60px);
+  }
+}
+
+/* Mobile and tablet - no X translations */
+@media (max-width: 991px) {
+  .help-section__image,
+  .center-benefits__image,
+  .designed-for-needs__image,
+  .pricing-section__image,
+  .contact-interest-section__visual-img {
+    transform: translateY(50px); /* Only Y translation on mobile */
+  }
+}
+
+/* Animated state */
+.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) translateX(0) !important;
+}
+
+/* Special case for mobile image centering */
+.easy-integration__image-mobile.animate-in {
+  transform: translateX(-50%) !important;
 }
 
 /* ==========================================================================

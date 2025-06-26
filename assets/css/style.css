@@ -273,22 +273,6 @@ a:hover {
    Utility Classes
    ========================================================================== */
 
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: var(--primary-color);
-  color: white;
-  padding: 8px;
-  text-decoration: none;
-  border-radius: var(--radius-md);
-  z-index: var(--z-tooltip);
-}
-
-.skip-link:focus {
-  top: 6px;
-}
-
 .section-title {
   text-align: center;
   margin-bottom: var(--spacing-3xl);

@@ -1801,3 +1801,61 @@ body.mobile-menu-open {
 .header__mobile-toggle.invert-colors span {
   background-color: var(--text-white);
 }
+
+/* ==========================================================================
+   Progressive Image Loading
+   ========================================================================== */
+
+/* Low quality image (blurred placeholder) */
+.progressive-image-low {
+  filter: blur(10px);
+  transform: scale(1.1);
+  transition: opacity var(--transition-slow), filter var(--transition-slow);
+  z-index: 1;
+}
+
+.progressive-image-low.is-hidden {
+  opacity: 0;
+  filter: blur(0);
+  display: none;
+}
+
+/* High quality image */
+.progressive-image-high {
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+  z-index: 2;
+}
+
+.progressive-image-high.is-loaded {
+  opacity: 1;
+}
+
+/* Loading state for parent container */
+.progressive-image-container.is-loading::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border: 3px solid var(--border-light);
+  border-top: 3px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 3;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================================================================
+   Universal Section Styles
+   ========================================================================== */

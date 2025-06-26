@@ -318,14 +318,11 @@ a:hover {
   font-size: var(--font-size-4xl);
   line-height: var(--line-height-100);
   margin-bottom: var(--spacing-md);
+  opacity: 0.9;
 }
 
 /* Universal section item title styles */
-.section-item-title,
-.help-section__item h3,
-.easy-integration__text-block h3,
-.designed-for-needs__item h3,
-.center-benefits__item h3 {
+h3 {
   font-size: var(--font-size-4xl);
   font-weight: var(--font-weight-bold);
   margin-bottom: var(--spacing-md);
@@ -628,21 +625,8 @@ a:hover {
   max-width: 930px;
 }
 
-.help-section__title {
-  /* Removed repeated styles - now handled by universal .section-title */
-}
-
 .help-section__item {
   margin-bottom: var(--spacing-2xl);
-}
-
-.help-section__item h3 {
-  /* Removed repeated styles - now handled by universal .section-item-title */
-}
-
-.help-section__item p {
-  /* Removed repeated styles - now handled by universal .section-text */
-  opacity: 0.9;
 }
 
 /* ==========================================================================
@@ -650,15 +634,6 @@ a:hover {
    ========================================================================== */
 .how-it-works-section {
   padding: var(--spacing-4xl) 0 var(--spacing-2xl);
-}
-
-.how-it-works-section__title {
-  /* Removed repeated styles - now handled by universal .section-title */
-  color: var(--primary-color);
-}
-.how-it-works-section p {
-  /* Removed repeated styles - now handled by universal .section-text */
-  opacity: 0.9;
 }
 
 .how-it-works__steps {
@@ -682,13 +657,9 @@ a:hover {
   max-width: 340px;
   height: auto;
   margin-bottom: var(--spacing-md);
-  border-radius: var(--radius-lg);
-  background: var(--background-light);
 }
 .how-it-works__caption {
-  font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bold);
-  color: var(--primary-color);
   text-align: center;
 }
 
@@ -856,7 +827,6 @@ a:hover {
 }
 
 .designed-for-needs__title {
-  /* Removed repeated styles - now handled by universal .section-title */
   color: var(--text-white);
 }
 
@@ -865,12 +835,10 @@ a:hover {
 }
 
 .designed-for-needs__item h3 {
-  /* Removed repeated styles - now handled by universal .section-item-title */
   color: var(--text-white);
 }
 
 .designed-for-needs__item p {
-  /* Removed repeated styles - now handled by universal .section-text */
   opacity: 0.9;
   max-width: 800px;
 }
@@ -919,10 +887,6 @@ a:hover {
 
 .center-benefits__item {
   margin-bottom: var(--spacing-2xl);
-}
-
-.center-benefits__item h3 {
-  /* Removed repeated styles - now handled by universal .section-item-title */
 }
 
 .center-benefits__item p {

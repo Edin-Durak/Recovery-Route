@@ -37,16 +37,16 @@
     Consolas, monospace;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
-  --font-size-5xl: 3rem;
-  --font-size-6xl: 4rem;
-  --font-size-7xl: 5rem;
-  --font-size-8xl: 6rem;
+  --font-size-base: 0.875rem;
+  --font-size-lg: 1rem;
+  --font-size-xl: 1.125rem;
+  --font-size-2xl: 1.25rem;
+  --font-size-3xl: 1.5rem;
+  --font-size-4xl: 1.75rem;
+  --font-size-5xl: 2.25rem;
+  --font-size-6xl: 3rem;
+  --font-size-7xl: 3.75rem;
+  --font-size-8xl: 4.5rem;
   --line-height-tight: 1.25;
   --line-height-base: 1.5;
   --line-height-relaxed: 1.75;
@@ -64,11 +64,11 @@
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
-  --spacing-2xl: 3rem;
-  --spacing-3xl: 4rem;
-  --spacing-4xl: 6rem;
-  --spacing-5xl: 8rem;
-  --spacing-6xl: 10rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 5rem;
+  --spacing-4xl: 8rem;
+  --spacing-5xl: 10rem;
+  --spacing-6xl: 12rem;
 
   /* Breakpoints */
   --breakpoint-xs: 0;
@@ -466,9 +466,9 @@ h3 {
    ========================================================================== */
 
 .hero {
-  padding: calc(80px + var(--spacing-4xl)) 0 var(--spacing-4xl);
+  padding: calc(80px + var(--spacing-3xl)) 0 var(--spacing-4xl);
   color: var(--text-white);
-  min-height: 80vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -560,7 +560,7 @@ h3 {
    ========================================================================== */
 
 .introduction {
-  padding: 15rem 0 var(--spacing-4xl);
+  padding: 12rem 0 var(--spacing-4xl);
   text-align: center;
 }
 
@@ -570,7 +570,7 @@ h3 {
 
 .introduction__image {
   position: absolute;
-  top: -200%;
+  top: -230%;
   right: 0;
   width: 100%;
   max-width: 834px;
@@ -649,6 +649,7 @@ h3 {
   max-width: 340px;
   height: auto;
   margin-bottom: var(--spacing-md);
+  box-shadow: -8px 8px 20px rgba(0, 0, 0, 0.15);
 }
 .how-it-works__caption {
   font-weight: var(--font-weight-bold);
@@ -728,22 +729,20 @@ h3 {
 .designed-for-needs {
   background: linear-gradient(
     to right,
-    #006266 15%,
-    #007176 15%,
-    #007176 30%,
-    #027f84 30%,
-    #027f84 45%,
-    #1b8c90 45%,
-    #1b8c90 57%,
-    #419fa3 57%,
-    #419fa3 67%,
-    #80bfc1 67%,
-    #80bfc1 77%,
-    #c0dfe0 77%,
-    #c0dfe0 85%,
-    #d7edee 85%,
-    #d7edee 93%,
-    #e4f1f2 93%
+    #006266 0%,
+    #006266 14.3%,
+    #007176 14.3%,
+    #007176 28.6%,
+    #027f84 28.6%,
+    #027f84 42.9%,
+    #1b8c90 42.9%,
+    #1b8c90 57.2%,
+    #419fa3 57.2%,
+    #419fa3 71.5%,
+    #80bfc1 71.5%,
+    #80bfc1 85.8%,
+    #c0dfe0 85.8%,
+    #c0dfe0 100%
   );
   color: var(--text-white);
   padding: var(--spacing-2xl) 0;
@@ -1175,7 +1174,7 @@ h3 {
     min-height: 70vh;
   }
   .introduction__image {
-    top: -150%;
+    top: -200%;
   }
 
   .help-section {
@@ -1355,7 +1354,7 @@ h3 {
   }
 
   .designed-for-needs__title {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-2xl);
     margin-bottom: var(--spacing-xl);
   }
 
@@ -1414,7 +1413,7 @@ h3 {
   }
 
   .pricing-section__title {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-2xl);
     margin-bottom: var(--spacing-xl);
   }
   .pricing-section__content p {
@@ -1464,11 +1463,11 @@ h3 {
   }
 
   .contact-interest-section__title {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-2xl);
     max-width: 100%;
   }
   .contact-interest-section__subtitle {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-lg);
   }
   .contact-interest-section__email {
     font-size: var(--font-size-lg);
@@ -1507,10 +1506,10 @@ h3 {
   }
 
   .introduction {
-    padding: 10rem 0 var(--spacing-4xl);
+    padding: 12rem 0 var(--spacing-4xl);
   }
   .introduction__image {
-    top: -100%;
+    top: -200%;
   }
 
   .pricing-section__container {
@@ -1563,6 +1562,12 @@ h3 {
   }
   .footer__social-icons {
     justify-content: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .introduction__image {
+    top: -150%;
   }
 }
 
@@ -1930,6 +1935,25 @@ body.mobile-menu-open {
 /* Special case for mobile image centering */
 .easy-integration__image-mobile.animate-in {
   transform: translateX(-50%) !important;
+}
+
+/* ==========================================================================
+   Image Shadows
+   ========================================================================== */
+
+/* How it works section images */
+.how-it-works__img {
+  box-shadow: -8px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Easy integration section images */
+.easy-integration__img {
+  box-shadow: -8px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Pricing section image */
+.pricing-section__image img {
+  box-shadow: -8px 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* ==========================================================================

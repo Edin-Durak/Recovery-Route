@@ -226,7 +226,6 @@ h6 {
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
   margin-bottom: var(--spacing-md);
-  color: var(--text-primary);
 }
 
 h1 {
@@ -255,8 +254,9 @@ h6 {
 }
 
 p {
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-100);
   margin-bottom: var(--spacing-md);
-  line-height: var(--line-height-relaxed);
 }
 
 a {
@@ -294,6 +294,41 @@ a:hover {
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+
+/* ==========================================================================
+   Universal Section Styles
+   ========================================================================== */
+
+/* Universal section title styles */
+[class*="title"] {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-3xl);
+}
+
+/* Universal section text styles */
+.section-text,
+.help-section__item p,
+.how-it-works-section p,
+.easy-integration__text-block,
+.designed-for-needs__item p,
+.center-benefits__item p,
+.pricing-section p {
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-100);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Universal section item title styles */
+.section-item-title,
+.help-section__item h3,
+.easy-integration__text-block h3,
+.designed-for-needs__item h3,
+.center-benefits__item h3 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
 }
 
 /* ==========================================================================
@@ -561,21 +596,7 @@ a:hover {
 
 .introduction__title {
   color: var(--text-primary);
-  font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
   margin-bottom: var(--spacing-xl);
-  font-family: var(--font-family-secondary);
-}
-
-.introduction__text {
-  font-size: var(--font-size-3xl);
-  line-height: var(--line-height-100);
-  color: var(--text-primary);
-  margin-bottom: var(--spacing-lg);
-}
-
-.introduction__text--large {
-  font-size: var(--font-size-3xl);
 }
 
 /* ==========================================================================
@@ -608,9 +629,7 @@ a:hover {
 }
 
 .help-section__title {
-  font-size: var(--font-size-5xl);
-  margin-bottom: var(--spacing-3xl);
-  font-weight: var(--font-weight-bold);
+  /* Removed repeated styles - now handled by universal .section-title */
 }
 
 .help-section__item {
@@ -618,14 +637,11 @@ a:hover {
 }
 
 .help-section__item h3 {
-  font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
-  margin-bottom: var(--spacing-md);
+  /* Removed repeated styles - now handled by universal .section-item-title */
 }
 
 .help-section__item p {
-  font-size: var(--font-size-4xl);
-  line-height: var(--line-height-100);
+  /* Removed repeated styles - now handled by universal .section-text */
   opacity: 0.9;
 }
 
@@ -637,13 +653,11 @@ a:hover {
 }
 
 .how-it-works-section__title {
-  font-size: var(--font-size-5xl);
-  font-weight: var(--font-weight-bold);
+  /* Removed repeated styles - now handled by universal .section-title */
   color: var(--primary-color);
 }
 .how-it-works-section p {
-  font-size: var(--font-size-4xl);
-  line-height: var(--line-height-100);
+  /* Removed repeated styles - now handled by universal .section-text */
   opacity: 0.9;
 }
 
@@ -707,8 +721,7 @@ a:hover {
 .easy-integration__title {
   grid-column: 2;
   grid-row: 1;
-  font-size: var(--font-size-5xl);
-  font-weight: var(--font-weight-bold);
+  /* Removed repeated styles - now handled by universal .section-title */
 }
 .easy-integration__text-block--1 {
   grid-column: 2;
@@ -728,16 +741,11 @@ a:hover {
   margin-bottom: 0;
 }
 .easy-integration__text-block {
-  font-size: var(--font-size-4xl);
   color: var(--text-color);
-  line-height: var(--line-height-100);
   margin-bottom: var(--spacing-xl);
 }
 .easy-integration__text-block h3 {
   color: var(--primary-color);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-4xl);
-  line-height: var(--line-height-100);
   display: block;
   margin-bottom: var(--spacing-xs);
 }
@@ -848,9 +856,7 @@ a:hover {
 }
 
 .designed-for-needs__title {
-  font-size: var(--font-size-5xl);
-  margin-bottom: var(--spacing-2xl);
-  font-weight: var(--font-weight-bold);
+  /* Removed repeated styles - now handled by universal .section-title */
   color: var(--text-white);
 }
 
@@ -859,15 +865,12 @@ a:hover {
 }
 
 .designed-for-needs__item h3 {
-  font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
-  margin-bottom: var(--spacing-md);
+  /* Removed repeated styles - now handled by universal .section-item-title */
   color: var(--text-white);
 }
 
 .designed-for-needs__item p {
-  font-size: var(--font-size-4xl);
-  line-height: var(--line-height-100);
+  /* Removed repeated styles - now handled by universal .section-text */
   opacity: 0.9;
   max-width: 800px;
 }
@@ -911,9 +914,7 @@ a:hover {
 }
 
 .center-benefits__title {
-  font-size: var(--font-size-5xl);
-  margin-bottom: var(--spacing-3xl);
-  font-weight: var(--font-weight-bold);
+  /* Removed repeated styles - now handled by universal .section-title */
 }
 
 .center-benefits__item {
@@ -921,14 +922,11 @@ a:hover {
 }
 
 .center-benefits__item h3 {
-  font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
-  margin-bottom: var(--spacing-md);
+  /* Removed repeated styles - now handled by universal .section-item-title */
 }
 
 .center-benefits__item p {
-  font-size: var(--font-size-4xl);
-  line-height: var(--line-height-100);
+  /* Removed repeated styles - now handled by universal .section-text */
   max-width: 500px;
 }
 
@@ -969,14 +967,11 @@ a:hover {
 }
 
 .pricing-section__title {
-  font-size: var(--font-size-5xl);
-  margin-bottom: var(--spacing-3xl);
-  font-weight: var(--font-weight-bold);
+  /* Removed repeated styles - now handled by universal .section-title */
 }
 
 .pricing-section p {
-  font-size: var(--font-size-4xl);
-  line-height: var(--line-height-100);
+  /* Removed repeated styles - now handled by universal .section-text */
   margin-bottom: var(--spacing-2xl);
 }
 
@@ -1739,15 +1734,14 @@ body.mobile-menu-open {
 
 .contact-interest-section__title {
   color: var(--primary-color);
-  font-size: var(--font-size-5xl);
-  font-weight: var(--font-weight-bold);
+  /* Removed repeated styles - now handled by universal .section-title */
   margin-bottom: var(--spacing-xl);
   max-width: 350px;
 }
 
 .contact-interest-section__subtitle {
   color: var(--primary-color);
-  font-size: var(--font-size-3xl);
+  /* Now handled by universal .section-text--small */
   font-weight: var(--font-weight-medium);
   margin-bottom: var(--spacing-2xl);
 }
@@ -1767,7 +1761,7 @@ body.mobile-menu-open {
 
 .contact-interest-section__form-title {
   color: var(--primary-color);
-  font-size: var(--font-size-3xl);
+  /* Now handled by universal .section-text--small */
   font-weight: var(--font-weight-bold);
   margin-bottom: var(--spacing-lg);
 }

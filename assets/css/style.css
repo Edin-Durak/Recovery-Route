@@ -136,12 +136,7 @@ body {
   background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-body,
-section,
-.container {
-  overflow: hidden; /* Prevent horizontal scrolling because of the  animations */
+  overflow-x: hidden; /* Prevent horizontal scrolling because of the  animations */
 }
 
 /* iOS Safari viewport height fix */

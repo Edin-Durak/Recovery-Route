@@ -177,7 +177,7 @@ body {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1000px;
     padding-right: var(--spacing-xl);
     padding-left: var(--spacing-xl);
   }
@@ -1129,11 +1129,16 @@ h3 {
     padding-top: 16rem;
   }
   .introduction__image {
-    top: -220%;
+    top: -200%;
+    max-width: 700px;
   }
 
   .introduction__title {
     padding-top: 0.5rem;
+  }
+
+  .contact-interest-section__content {
+    padding: var(--spacing-4xl) var(--spacing-lg);
   }
   .designed-for-needs__content {
     max-width: 600px;

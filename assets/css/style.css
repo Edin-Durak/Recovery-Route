@@ -1911,8 +1911,7 @@ body.mobile-menu-open {
 .footer__content > * {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity var(--transition-normal),
-    transform var(--transition-normal);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 /* Special X-axis animations for specific elements - Desktop only */
@@ -1920,15 +1919,18 @@ body.mobile-menu-open {
   .help-section__image,
   .center-benefits__image {
     transform: translateX(-50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
   .designed-for-needs__image,
   .pricing-section__image {
     transform: translateX(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
   .contact-interest-section__visual-img {
     transform: translateX(-60px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
 }
 
@@ -1940,6 +1942,7 @@ body.mobile-menu-open {
   .pricing-section__image,
   .contact-interest-section__visual-img {
     transform: translateY(50px); /* Only Y translation on mobile */
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
 }
 

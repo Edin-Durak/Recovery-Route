@@ -706,7 +706,6 @@ h3 {
   box-shadow: -8px 8px 20px rgba(0, 0, 0, 0.15);
 }
 .easy-integration__text-block {
-  color: var(--text-color);
   margin-bottom: var(--spacing-xl);
 }
 .easy-integration__text-block h3 {
@@ -1156,6 +1155,24 @@ h3 {
 }
 
 @media (max-width: 992px) {
+  [class*="title"] {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-xl);
+  }
+  .section-text,
+  .help-section__item p,
+  .how-it-works-section p,
+  .easy-integration__text-block p,
+  .designed-for-needs__item p,
+  .center-benefits__item p,
+  .pricing-section p {
+    font-size: var(--font-size-xl);
+  }
+
+  p {
+    font-size: var(--font-size-lg);
+  }
+
   .header__nav {
     justify-content: center;
   }
@@ -1655,10 +1672,10 @@ h3 {
 
 @media (max-width: 430px) {
   .introduction {
-    padding: 8rem 0 var(--spacing-4xl);
+    padding: 10rem 0 var(--spacing-2xl);
   }
   .introduction__image {
-    top: -240px;
+    top: -260px;
   }
 }
 

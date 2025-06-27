@@ -156,12 +156,16 @@ body {
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
+    padding-right: var(--spacing-md);
+    padding-left: var(--spacing-md);
   }
 }
 
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
+    padding-right: var(--spacing-lg);
+    padding-left: var(--spacing-lg);
   }
 }
 
@@ -174,10 +178,26 @@ body {
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+    padding-right: var(--spacing-xl);
+    padding-left: var(--spacing-xl);
+  }
+  .designed-for-needs__image {
+    padding-right: var(--spacing-xl);
   }
 }
 
 @media (min-width: 1400px) {
+  .container {
+    max-width: 1300px;
+    padding-right: var(--spacing-2xl);
+    padding-left: var(--spacing-2xl);
+  }
+  .designed-for-needs__image {
+    padding-right: var(--spacing-2xl);
+  }
+}
+
+@media (min-width: 1600px) {
   .container {
     max-width: 1400px;
   }
@@ -613,14 +633,13 @@ h3 {
   align-items: flex-start;
   gap: var(--spacing-4xl);
   margin-top: var(--spacing-3xl);
-  flex-wrap: wrap;
 }
 .how-it-works__step {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 340px;
-  flex: 1 1 340px;
+  max-width: 33.33333333333333%;
+  flex: 1 1 33.33333333333333%;
   background: none;
 }
 .how-it-works__img {
@@ -729,7 +748,6 @@ h3 {
 
 .designed-for-needs__container {
   position: relative;
-  padding: 0 var(--spacing-md);
   color: var(--text-white);
 }
 .designed-for-needs__title {
@@ -750,6 +768,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: var(--spacing-md);
 }
 
 .designed-for-needs__image img {
@@ -1012,12 +1031,7 @@ h3 {
   padding: var(--spacing-4xl) 0 var(--spacing-lg);
   box-shadow: 0 -2px 16px 0 rgba(44, 44, 44, 0.04);
 }
-.footer__container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-  max-width: 1440px;
-}
+
 .footer__content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -1099,16 +1113,33 @@ h3 {
 /* ==========================================================================
    Responsive Design
    ========================================================================== */
-
+@media (max-width: 1600px) {
+  .introduction {
+    padding-top: 17rem;
+  }
+  .introduction__image {
+    top: -210%;
+  }
+  .introduction__title {
+    padding-top: 0.8rem;
+  }
+}
 @media (max-width: 1400px) {
   .introduction {
     padding-top: 16rem;
+  }
+  .introduction__image {
+    top: -220%;
+  }
+
+  .introduction__title {
+    padding-top: 0.5rem;
   }
   .designed-for-needs__content {
     max-width: 600px;
   }
   .designed-for-needs__image {
-    top: 0;
+    top: -10%;
   }
 }
 
@@ -1127,6 +1158,14 @@ h3 {
     max-width: 700px;
     top: -200%;
   }
+
+  .how-it-works__steps {
+    flex-wrap: wrap;
+  }
+  .how-it-works__step {
+    max-width: 33.33333333333333%;
+    flex: 1 1 33.33333333333333%;
+  }
   .designed-for-needs__content {
     max-width: 500px;
   }
@@ -1138,7 +1177,9 @@ h3 {
   .easy-integration__grid {
     grid-template-columns: 300px 1fr;
   }
-
+  .contact-interest-section__content {
+    padding: var(--spacing-4xl) var(--spacing-md);
+  }
   .footer__content {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: var(--spacing-2xl);
@@ -1488,6 +1529,10 @@ h3 {
     justify-content: center;
     text-align: center;
   }
+  .footer__social-group {
+    align-items: center;
+  }
+
   .footer__brand {
     justify-content: center;
     margin-bottom: var(--spacing-lg);

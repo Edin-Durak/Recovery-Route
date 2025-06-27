@@ -576,6 +576,7 @@ h3 {
 .introduction__title {
   color: var(--text-primary);
   margin-bottom: var(--spacing-xl);
+  padding-top: 0.5rem;
 }
 
 /* ==========================================================================

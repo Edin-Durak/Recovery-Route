@@ -550,7 +550,7 @@ h3 {
    ========================================================================== */
 
 .introduction {
-  padding: 12rem 0 var(--spacing-4xl);
+  padding: 14rem 0 var(--spacing-4xl);
   text-align: center;
 }
 
@@ -1112,6 +1112,9 @@ h3 {
    ========================================================================== */
 
 @media (max-width: 1400px) {
+  .introduction {
+    padding-top: 16rem;
+  }
   .designed-for-needs__content {
     max-width: 600px;
   }
@@ -1127,6 +1130,9 @@ h3 {
 
   .header__menu > li {
     width: min-content;
+  }
+  .introduction {
+    padding-top: 18rem;
   }
   .introduction__image {
     max-width: 700px;

@@ -32,10 +32,6 @@
   /* Typography */
   --font-family-primary: "Figtree", -apple-system, BlinkMacSystemFont,
     sans-serif;
-  --font-family-secondary: "Figtree", sans-serif;
-  --font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono",
-    Consolas, monospace;
-  --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 0.875rem;
   --font-size-lg: 1rem;
@@ -44,14 +40,9 @@
   --font-size-3xl: 1.5rem;
   --font-size-4xl: 1.75rem;
   --font-size-5xl: 2.25rem;
-  --font-size-6xl: 3rem;
-  --font-size-7xl: 3.75rem;
-  --font-size-8xl: 4.5rem;
   --line-height-tight: 1.25;
   --line-height-base: 1.5;
-  --line-height-relaxed: 1.75;
   --line-height-100: 100%;
-  --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
@@ -214,7 +205,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-family-secondary);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
   margin-bottom: var(--spacing-md);
@@ -1138,7 +1128,10 @@ h3 {
   .header__menu > li {
     width: min-content;
   }
-
+  .introduction__image {
+    max-width: 700px;
+    top: -200%;
+  }
   .designed-for-needs__content {
     max-width: 500px;
   }
@@ -1194,7 +1187,8 @@ h3 {
     min-height: 70vh;
   }
   .introduction__image {
-    top: -300%;
+    max-width: 550px;
+    top: -250%;
   }
 
   .help-section {
@@ -1770,7 +1764,6 @@ body.mobile-menu-open {
   color: var(--text-white);
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-semibold);
-  font-family: var(--font-family-secondary);
   text-decoration: none;
   transition: color var(--transition-fast);
 }

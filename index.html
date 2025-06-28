@@ -318,7 +318,7 @@
       >
         <div class="container">
           <img
-            src="assets/images/Group 104.png"
+            src="assets/images/mobile-and-laptop-img.png"
             alt="RecoveryRoute application interface shown on a MacBook and an iPhone."
             loading="lazy"
             class="introduction__image img-fluid"
@@ -683,10 +683,21 @@
       >
         <div class="contact-interest-section__container container">
           <div class="contact-interest-section__visual">
+            <!-- Low quality image (blurred) -->
             <img
-              src="assets/images/multiple-phones-img.png"
+              class="progressive-image-low contact-interest-section__visual-img"
+              data-progressive-image="image9"
+              src="./assets/images/multiple-phones-low-quality.webp"
               alt="Multiple phones showing RecoveryRoute app"
-              class="contact-interest-section__visual-img"
+              loading="lazy"
+            />
+
+            <!-- High quality image (hidden initially) -->
+            <img
+              class="progressive-image-high contact-interest-section__visual-img"
+              data-progressive-image="image9"
+              src="./assets/images/multiple-phones-high-quality.png"
+              alt="Multiple phones showing RecoveryRoute app"
               loading="lazy"
             />
           </div>

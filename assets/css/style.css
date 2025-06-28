@@ -886,18 +886,17 @@ h3 {
   min-width: 420px;
   max-width: 600px;
   min-height: 480px;
-  border-radius: var(--radius-lg);
   z-index: 1;
-  /* No background-image here */
+  position: relative;
 }
 
 .contact-interest-section__visual-img {
   width: 100%;
-  max-width: 600px;
+  max-width: 100%;
   height: auto;
-  border-radius: var(--radius-lg);
   opacity: 0;
   transform: translateX(-30px);
+  position: absolute;
 }
 
 .contact-interest-section__content {
